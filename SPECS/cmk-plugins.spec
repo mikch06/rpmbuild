@@ -1,5 +1,5 @@
 Name:		cmk-plugins           
-Version:        1
+Version:        2
 Release:        0
 Summary:        Build rpm of Checkmk plugins
 License:	no 
@@ -27,10 +27,13 @@ mkdir -p $plg_dir
 mkdir -p $cfg_dir
 
 cp -R * $plg_dir
+cp -R * $cfg_dir
 
 %files
 /opt/cmk/plg/mk_inventory.linux
+/opt/cmk/cfg/mk_inventory.linux
 /opt/cmk/plg/mk_docker.py
+/opt/cmk/cfg/mk_docker.py
 
 
 %changelog
